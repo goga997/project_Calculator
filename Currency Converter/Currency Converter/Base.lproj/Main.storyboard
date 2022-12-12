@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Converter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$321.56" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmx-86-djj">
+                                <rect key="frame" x="40" y="97" width="310" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Conversion Rate" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hSv-DU-ASA">
+                                <rect key="frame" x="60" y="164" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ULZ-SJ-NYc">
+                                <rect key="frame" x="152.66666666666666" y="353" width="85" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                <connections>
+                                    <action selector="converting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8W2-9O-HN3"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jla-gX-AA3">
+                                <rect key="frame" x="157.66666666666666" y="283" width="75" height="32"/>
+                                <segments>
+                                    <segment title="🇲🇩"/>
+                                    <segment title="🇪🇺"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount to be Converted" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJv-uP-sAA">
+                                <rect key="frame" x="60" y="230" width="270" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7b-lH-3IG">
+                                <rect key="frame" x="20" y="398" width="350" height="35"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press here to use DOT (.) -&gt; Rate"/>
+                                <connections>
+                                    <action selector="addDot:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Efy-dt-cHJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hL8-7V-Erm">
+                                <rect key="frame" x="20" y="443" width="350" height="35"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press here to use DOT (.) -&gt; Amount"/>
+                                <connections>
+                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pwb-4j-Z6g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qmx-86-djj" secondAttribute="trailing" constant="40" id="2mZ-rK-XH1"/>
+                            <constraint firstItem="N7b-lH-3IG" firstAttribute="top" secondItem="ULZ-SJ-NYc" secondAttribute="bottom" constant="10" id="5Kl-rw-Fhk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hL8-7V-Erm" secondAttribute="trailing" constant="20" id="5Lr-zO-vkP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJv-uP-sAA" secondAttribute="trailing" constant="60" id="6cG-ij-cjl"/>
+                            <constraint firstItem="ULZ-SJ-NYc" firstAttribute="top" secondItem="jla-gX-AA3" secondAttribute="bottom" constant="39" id="8Os-5n-Vyx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hSv-DU-ASA" secondAttribute="trailing" constant="60" id="CNT-dH-Z2l"/>
+                            <constraint firstItem="hSv-DU-ASA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="EnM-rU-KtS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N7b-lH-3IG" secondAttribute="trailing" constant="20" id="NNE-5I-Ii0"/>
+                            <constraint firstItem="qmx-86-djj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oxt-ue-RBM"/>
+                            <constraint firstItem="hL8-7V-Erm" firstAttribute="top" secondItem="N7b-lH-3IG" secondAttribute="bottom" constant="10" id="PMi-Ke-hDK"/>
+                            <constraint firstItem="WJv-uP-sAA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="Ts4-O5-rLP"/>
+                            <constraint firstItem="N7b-lH-3IG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yem-ux-an0"/>
+                            <constraint firstItem="jla-gX-AA3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aoc-eh-tLO"/>
+                            <constraint firstItem="hSv-DU-ASA" firstAttribute="top" secondItem="qmx-86-djj" secondAttribute="bottom" constant="31" id="d9Q-qz-7WL"/>
+                            <constraint firstItem="qmx-86-djj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="fOK-We-uMI"/>
+                            <constraint firstItem="hL8-7V-Erm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fwG-di-wcX"/>
+                            <constraint firstItem="qmx-86-djj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gz4-Ds-1ri"/>
+                            <constraint firstItem="jla-gX-AA3" firstAttribute="top" secondItem="WJv-uP-sAA" secondAttribute="bottom" constant="19" id="hou-GW-sMR"/>
+                            <constraint firstItem="WJv-uP-sAA" firstAttribute="top" secondItem="hSv-DU-ASA" secondAttribute="bottom" constant="32" id="lg1-nd-K69"/>
+                            <constraint firstItem="hSv-DU-ASA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oiw-h8-rxo"/>
+                            <constraint firstItem="ULZ-SJ-NYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7S-41-clh"/>
+                            <constraint firstItem="WJv-uP-sAA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vnj-sS-0K0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="amountSpot" destination="WJv-uP-sAA" id="nLM-4E-hI3"/>
+                        <outlet property="convertedLabel" destination="qmx-86-djj" id="gf0-Cg-oc1"/>
+                        <outlet property="rateSpot" destination="hSv-DU-ASA" id="ks9-W3-puE"/>
+                        <outlet property="switcher" destination="jla-gX-AA3" id="9Vd-uR-mxW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
